@@ -1,4 +1,4 @@
-const boxSize = 30;
+const boxSize = 100;
 let yValues = [];
 let xValues = [];
 let snapshotIndex = 0;
@@ -127,7 +127,7 @@ function quicksort(arr, low, high) {
     pivot = high;
     saveSnapshot(arr, low, pivot, high, 'After pivot swap in quicksort');
     // Move pivot value to between the array parts
-    let middle = partition(arr, low, high - 1, pivot);
+    let middle = partition(arr, low, high, pivot);
     swap(arr, middle, pivot);
     saveSnapshot(arr, low, pivot, high, 'After middle swap in quicksort');
     quicksort(arr, low, middle);
